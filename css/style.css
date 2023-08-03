@@ -112,11 +112,21 @@ header {
 }
 button {
 	padding: 16px 32px;
-	border-radius: 32px;
+	border-radius: 16px;
 	border: 1px solid white;
 	background: rgba(255, 255, 255, 10%);
 	color: white;
 	cursor: pointer;
+	transition-duration: 200ms;
+	transition-timing-function: ease-out;
+}
+button:hover {
+	background-color: var(--color-red);
+	border-radius: 32px;
+	border: 1px solid var(--color-red);
+}
+button:active {
+	filter: brightness(80%);
 }
 .nav-bar .wrapper {
 	display: flex;
@@ -165,6 +175,16 @@ button {
 	padding: 10px;
 	color: white;
 	text-decoration: none;
+	transition-duration: 300ms;
+	transition-timing-function: ease-out;
+}
+.nav-btn-vn li a:hover {
+	color: var(--color-yellow);
+	transition-duration: 300ms;
+	transition-timing-function: ease-out;
+}
+.nav-btn-vn li a:active {
+	filter: brightness(80%);
 }
 .banner {
 	width: 100%;
@@ -222,6 +242,14 @@ article {
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
+	border-radius: 16px;
+	transition-duration: 300ms;
+	transition-timing-function: ease-out;
+}
+.food-1:hover {
+	border-radius: 32px;
+	transition-duration: 300ms;
+	transition-timing-function: ease-out;
 }
 .food-1 img {
 	height: 100%;
@@ -249,6 +277,14 @@ article {
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
+	border-radius: 16px;
+	transition-duration: 300ms;
+	transition-timing-function: ease-out;
+}
+.food-2:hover {
+	border-radius: 32px;
+	transition-duration: 300ms;
+	transition-timing-function: ease-out;
 }
 .food-2 img {
 	height: 100%;
@@ -456,10 +492,6 @@ footer .nav-btn-vn li {
 	}
 	.nav-bar .left {
 		padding-left: unset;
-	}
-	.nav-bar .right img.instagram {
-		width: 48px;
-		height: 48px;
 	}
 	.nav-bar .right img.instagram {
 		display: none;
