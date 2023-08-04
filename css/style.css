@@ -50,6 +50,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
 :root {
 	--background-main: #170E03;
@@ -63,6 +64,9 @@
 	line-height: normal;
 	color: white;
 	background-color: var(--background-main);
+}
+#menu {
+	background-color: var(--background-alt);
 }
 h1 {
 	font-family: 'Playfair Display';
@@ -169,7 +173,6 @@ button:active {
 	width: fit-content;
 	justify-content: center;
 	align-items: center;
-	list-style-type: none;
 }
 .nav-btn-vn li a {
 	padding: 10px;
@@ -219,7 +222,7 @@ button:active {
 article {
 	height: fit-content;
 }
-.section-1 {
+.section-top {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -227,13 +230,13 @@ article {
 	padding: 112px 0 56px 0;
 	gap: 32px;
 }
-.section-1 .dialog {
+.section-top .dialog {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	width: 40%;
 }
-.section-1 .dialog p {
+.section-top .dialog p {
 	color: var(--color-yellow);
 }
 .food-1 {
@@ -254,7 +257,7 @@ article {
 .food-1 img {
 	height: 100%;
 }
-.section-2 {
+.section {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -262,13 +265,13 @@ article {
 	padding: 56px 0 56px 0;
 	gap: 32px;
 }
-.section-2 .dialog {
+.section .dialog {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	width: 40%;
 }
-.section-2 .dialog p {
+.section .dialog p {
 	color: var(--color-yellow);
 }
 .food-2 {
@@ -289,7 +292,7 @@ article {
 .food-2 img {
 	height: 100%;
 }
-.section-3 {
+.section-bottom {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -297,18 +300,17 @@ article {
 	padding: 56px 0 112px 0;
 	gap: 32px;
 }
-.section-3 .dialog {
+.section-bottom .dialog {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	width: 600px;
 }
-.section-3 .dialog p {
+.section-bottom .dialog p {
 	color: var(--color-yellow);
 }
 .reservations-vn {
 	position: relative;
-	width: 100%;
 	height: 50vh;
 	overflow: hidden;
 }
@@ -334,7 +336,7 @@ article {
 	color: white;
 	text-decoration: none;
 }
-footer {
+footer .wrapper {
 	position: relative;
 	display: flex;
 	justify-content: space-around;
@@ -350,14 +352,27 @@ footer {
 	align-items: center;
 	border: 2px solid white;
 }
-footer .nav-btn-vn ul {
+footer .wrapper .nav-btn-vn ul {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 8px;
 }
-footer .nav-btn-vn li {
-	list-style-type: none;
+#menu header {
+	height: 76px;
+}
+#menu .dialog {
+	text-align: unset;
+	gap: 56px;
+}
+#menu .price {
+	display: flex;
+	justify-content: space-between;
+}
+#menu .price ul {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
 }
 
 /* Sub 1080p sizes */
@@ -401,15 +416,6 @@ footer .nav-btn-vn li {
 		width: 36px;
 		height: 36px;
 	}
-}
-/* Laptop size */
-@media screen and (max-width: 1220px) {
-	.wrapper {
-		width: 100%;
-	}
-}
-/* Trigger Vertical Banner Scaling */
-@media screen and (max-width: 1030px) {
 	.banner {
 		display: flex;
 		justify-content: center;
@@ -417,6 +423,12 @@ footer .nav-btn-vn li {
 	.banner img {
 		width: unset;
 		height: 100%;
+	}
+}
+/* Laptop size */
+@media screen and (max-width: 1220px) {
+	.wrapper {
+		width: 100%;
 	}
 }
 
@@ -428,18 +440,52 @@ footer .nav-btn-vn li {
 		justify-content: center;
 		align-items: center;
 		padding: 10px;
+	}
+	.dropdown-menu ul {
+		display: none;
+	}
+	.dropdown-menu ul:hover {
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
 		gap: 8px;
+		border-radius: 16px;
+		background-color: var(--background-main);
+	}
+	.dropdown-menu li{
+		width: 150px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.dropdown-menu li a {
+		padding: 10px;
+		color: white;
+		text-decoration: none;
+		transition-duration: 300ms;
+		transition-timing-function: ease-out;
+	}
+	.dropdown-menu li a:hover {
+		color: var(--color-yellow);
+		transition-duration: 300ms;
+		transition-timing-function: ease-out;
+	}
+	.dropdown-menu li a:active {
+		filter: brightness(80%);
 	}
 	.nav-btn-vn li {
 		display: none;
 	}
-	.section-1 .dialog {
+	.section-top .dialog {
 		display: none;
 	}
-	.section-2 .dialog {
+	.section .dialog {
 		display: none;
 	}
-	.section-3 .dialog {
+	.section-bottom .dialog {
 		width: 90%;
 	}
 	.nav-bar {
@@ -448,6 +494,15 @@ footer .nav-btn-vn li {
 	.nav-bar .left {
 		gap: unset;
 		padding-left: 14%;
+	}
+	.reservations-vn img {
+		width: unset;
+		height: 100%;
+		opacity: 50%;
+	}
+	footer .wrapper {
+		flex-direction: column;
+		gap: 32px;
 	}
 }
 /* Phone */
@@ -492,6 +547,9 @@ footer .nav-btn-vn li {
 	}
 	.nav-bar .left {
 		padding-left: unset;
+	}
+	.nav-bar .right {
+		gap: unset;
 	}
 	.nav-bar .right img.instagram {
 		display: none;
