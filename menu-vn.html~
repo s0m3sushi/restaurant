@@ -205,9 +205,7 @@
 	</article>
 </div>
 		<div class="reservations">
-			<div class="banner">
-				<img src="./img/banner.jpg" alt="">
-			</div>
+			<img src="./img/banner.jpg" alt="">
 			<div class="dialog-box">
 				<div class="dialog">
 					<h1>Đặt bàn ngay</h1>

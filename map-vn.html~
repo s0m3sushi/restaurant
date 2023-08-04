@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Map</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<body id="map">
+<div class="wrapper">
+	<header>
+		<div class="nav-bar">
+			<div class="wrapper">
+				<div class="dropdown-menu">
+					<img class="dropdown-bars" src="./svg/dropdown-bars.svg" alt="">
+					<ul>
+						<li><a href="./main-vn.html"><h4>Home</h4></a></li>
+						<li><a href="./menu-vn.html"><h4>Thực đơn</h4></a></li>
+						<li><a href="./map-vn.html"><h4>Địa điểm</h4></a></li>
+						<li><a href="./reservations-vn.html"><h4>Đặt bàn</h4></a></li>
+						<li><a href="./contact-vn.html"><h4>Liên Hệ</h4></a></li>
+					</ul>
+				</div>
+				<div class="left">
+					<a href="./main-vn.html">
+						<div class="logo">
+							<img src="./svg/logo.svg" alt="">
+						</div>
+					</a>
+					<div class="nav-btn-vn">
+						<ul>
+							<li><a href="./main-vn.html"><h4>Home</h4></a></li>
+							<li><a href="./menu-vn.html"><h4>Thực đơn</h4></a></li>
+							<li><a href="./map-vn.html"><h4>Địa điểm</h4></a></li>
+							<li><a href="./reservations-vn.html"><h4>Đặt bàn</h4></a></li>
+							<li><a href=".contact-vn.html"><h4>Liên Hệ</h4></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right">
+					<a href=""><img class="flag" src="./svg/vn-flag.svg" alt=""></a>
+					<a href=""><img class="instagram" src="./svg/instagram.svg" alt=""></a>
+					<a href=""><img class="facebook" src="./svg/facebook.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<article>
+		<div class="country-map">
+			<img src="./svg/vn-country.svg" alt="">
+		</div>
+		<div class="wrapper">
+			<div class="section-top">
+				<h3>Miền Bắc</h3>
+				<div class="address">
+					<ul>
+						<li>Địa điểm 1 Lorem ipsum dolor</li>
+						<li>Địa điểm 1 Lorem ipsum dolor</li>
+						<li>Địa điểm 1 Lorem ipsum dolor</li>
+						<li>Địa điểm 1 Lorem ipsum dolor</li>
+					</ul>
+				</div>
+			</div>
+			<div class="section">
+				<h3>Miền Trung</h3>
+				<div class="address">
+					<ul>
+						<li>Địa điểm 2 Lorem ipsum dolor</li>
+						<li>Địa điểm 2 Lorem ipsum dolor</li>
+						<li>Địa điểm 2 Lorem ipsum dolor</li>
+						<li>Địa điểm 2 Lorem ipsum dolor</li>
+					</ul>
+				</div>
+			</div>
+			<div class="section-bottom">
+				<h3>Miền Nam</h3>
+				<div class="address">
+					<ul>
+						<li>Địa điểm 3 Lorem ipsum dolor</li>
+						<li>Địa điểm 3 Lorem ipsum dolor</li>
+						<li>Địa điểm 3 Lorem ipsum dolor</li>
+						<li>Địa điểm 3 Lorem ipsum dolor</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
+	<footer>
+		<div class="wrapper">
+			<a href="./main-vn.html">
+				<div class="logo-large">
+					<img src="./svg/logo.svg" alt="">
+				</div>
+			</a>
+			<div class="nav-btn-vn">
+				<ul>
+					<li><a href="./main-vn.html"><h4>Home</h4></a></li>
+					<li><a href="./menu-vn.html"><h4>Thực đơn</h4></a></li>
+					<li><a href="./map-vn.html"><h4>Địa điểm</h4></a></li>
+					<li><a href="./reservations-vn.html"><h4>Đặt bàn</h4></a></li>
+					<li><a href="./contact-vn.html"><h4>Liên Hệ</h4></a></li>
+				</ul>
+			</div>
+			<div class="description">
+				<div class="social-media">
+					<a href=""><img class="instagram" src="./svg/instagram.svg" alt=""></a>
+					<a href=""><img class="facebook" src="./svg/facebook.svg" alt=""></a>
+				</div>
+				<p>
+					<br>
+					© Copyright LOLOLOL<br>
+					All rights reserved.<br>
+					Designed and coded by s0m3guy.<br>
+					<br>
+					No JavaScript was used in this website.<br>
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
