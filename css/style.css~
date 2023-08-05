@@ -137,6 +137,7 @@ button:hover {
 }
 button:active {
 	filter: brightness(80%);
+	border-radius: 16px;
 }
 .nav-bar .wrapper {
 	display: flex;
@@ -433,6 +434,140 @@ footer .wrapper .nav-btn ul {
 #map .section-bottom .address {
 	color: var(--color-red);
 }
+#reservations article {
+	display: flex;
+	justify-content: space-around;
+	gap: 32px;
+	padding: 56px 0;
+}
+#reservations .heads-up {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+#reservations .heads-up .dialog {
+	width: 190px;
+	height: fit-content;
+	padding: 30px;
+	border: 1px solid var(--color-red);
+	border-radius: 16px;
+	text-align: center;
+}
+#reservations .heads-up .dialog:hover {
+	border-radius: 32px;
+}
+#reservations .form form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+#reservations .form ul li {
+	width: 100%;
+}
+#reservations .form ul li label h6 {
+	padding: 0 0 4px 8px;
+}
+#reservations .form ul li input {
+	width: 100%;
+	height: 32px;
+	border: none;
+	border-radius: 8px;
+	font-family: inherit;
+}
+#reservations .form ul.name-phone {
+	display: flex;
+	gap: 8px;
+}
+#reservations .form ul.date-time-guests {
+	display: flex;
+	gap: 8px;
+}
+#reservations .form span {
+	display: block;
+	width: 100%;
+	height: 220px;
+	overflow: hidden;
+	resize: vertical;
+	min-height: 32px;
+	border-radius: 8px;
+	background-color: white;
+	color: black;
+}
+#reservations .form ul.submit li {
+	display: flex;
+	justify-content: flex-end;
+}
+#reservations .dialog-misc {
+	width: 250px;
+}
+#contact header {
+	height: 76px;
+}
+#contact article {
+	display: flex;
+	justify-content: space-around;
+	gap: 32px;
+	padding: 56px 0;
+}
+#contact .heads-up {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+#contact .heads-up .dialog {
+	width: 190px;
+	height: fit-content;
+	padding: 30px;
+	border: 1px solid var(--color-red);
+	border-radius: 16px;
+	text-align: center;
+}
+#contact .heads-up .dialog:hover {
+	border-radius: 32px;
+}
+#contact .form form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+#contact .form ul li {
+	width: 100%;
+}
+#contact .form ul li label h6 {
+	padding: 0 0 4px 8px;
+}
+#contact .form ul li input {
+	width: 100%;
+	height: 32px;
+	border: none;
+	border-radius: 8px;
+	font-family: inherit;
+}
+#contact .form ul.name-phone {
+	display: flex;
+	gap: 8px;
+}
+#contact .form ul.date-time-guests {
+	display: flex;
+	gap: 8px;
+}
+#contact .form span {
+	display: block;
+	width: 100%;
+	height: 220px;
+	overflow: hidden;
+	resize: vertical;
+	min-height: 32px;
+	border-radius: 8px;
+	background-color: white;
+	color: black;
+}
+#contact .form ul.submit li {
+	display: flex;
+	justify-content: flex-end;
+}
 
 /* Sub 1080p sizes */
 @media screen and (max-width: 1500px) {
@@ -489,10 +624,21 @@ footer .wrapper .nav-btn ul {
 	.wrapper {
 		width: 100%;
 	}
+	#reservations article {
+		padding: 56px 16px;
+	}
+	#contact article {
+		padding: 56px 16px;
+	}
 }
 
 /* Tablet */
 @media screen and (max-width: 810px) {
+	button {
+		background-color: var(--color-red);
+		border-radius: 32px;
+		border: 1px solid var(--color-red);
+	}
 	.dropdown-menu {
 		display: inline-flex;
 		width: fit-content;
@@ -590,6 +736,18 @@ footer .wrapper .nav-btn ul {
 	#map .country-map img {
 		opacity: 50%;
 	}
+	#reservations article {
+		flex-direction: column;
+	}
+	#reservations .heads-up {
+		align-items: center;
+	}
+	#contact article {
+		flex-direction: column;
+	}
+	#contact .heads-up {
+		align-items: center;
+	}
 }
 /* Phone */
 @media screen and (max-width: 500px) {
@@ -628,8 +786,11 @@ footer .wrapper .nav-btn ul {
 		font-weight: 400;
 		font-size: 16px;
 	}
-	.reservations {
-		height: 100vh;
+	button {
+		width: 100%;
+	}
+	.banner-text a {
+		width: 50%;
 	}
 	.nav-bar .left {
 		padding-left: unset;
@@ -642,9 +803,6 @@ footer .wrapper .nav-btn ul {
 	}
 	.nav-bar .right img.facebook {
 		display: none;
-	}
-	article {
-		width: 100vw;
 	}
 	.food-1 {
 		width: 90%;
@@ -661,12 +819,16 @@ footer .wrapper .nav-btn ul {
 		height: 100%;
 	}
 	.reservations {
+		height: 100vh;
 		display: flex;
 		justify-content: center;
 	}
 	.reservations img {
 		width: unset;
 		height: 100%;
+	}
+	.reservations a {
+		width: 50%;
 	}
 	.logo-large {
 		width: 128px;
@@ -680,6 +842,24 @@ footer .wrapper .nav-btn ul {
 	}
 	#map .section-bottom {
 		padding: 48px 0 16px 10%;
+	}
+	#reservations .form ul li label h6 {
+		padding: 0 0 4px 4px;
+	}
+	#reservations .form ul li a {
+		width: 100%;
+	}
+	#reservations button {
+		width: 100%;
+	}
+	#contact .form ul li label h6 {
+		padding: 0 0 4px 4px;
+	}
+	#contact .form ul li a {
+		width: 100%;
+	}
+	#contact button {
+		width: 100%;
 	}
 }
 /* iPhone 5 Support */
